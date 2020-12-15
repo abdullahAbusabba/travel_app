@@ -1,0 +1,80 @@
+@import "variables.scss";
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .modal {
+    width: 50%;
+    min-width: 300px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: modalopen $duration ease-in-out forwards;
+    .modal-header {
+      background: $primary-color;
+      color: whitesmoke;
+      padding: 15px;
+      h4 {
+        margin: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #333;
+      }
+    }
+    .modal-content {
+      padding: 20px;
+      .modal-form {
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        .form-input {
+          padding: 8px;
+          width: 100%;
+        }
+      }
+    }
+
+    .close-btn {
+      background: transparent;
+      font-size: 25px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &.show-modal {
+    display: block;
+  }
+}
+
+#submit-btn {
+  width: 100%;
+  transition: $duration;
+  &:hover {
+    text-decoration: underline;
+    background-color: $primary-color;
+    color: whitesmoke;
+    font-weight: 900;
+    border-radius: 5px;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

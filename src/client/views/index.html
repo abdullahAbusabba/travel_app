@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+</head>
+
+<body>
+
+  <main class="wrapper">
+    <nav>
+        <div class="logo">
+            <img src="../images/pexels-cristian-dina-1851415.jpg" alt="user"></img>
+        </div>
+        <ul>
+            <li>
+              
+                <a href="#">
+                  <i class="fas fa-home fa-sm"></i>Home</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-info fa-sm"></i>About</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-id-card fa-sm"></i>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- navigation bar ends -->
+    <header>
+      <div class="dark-overlay">
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Travel App</h1>
+        <p>Travel is the only thing you buy that makes you richer.</p>
+        <button  class="cta-btn" id="open">Start!</button>
+      </div>
+    </header>
+  <!-- header ends -->
+
+<div id="result">
+   
+  </div>
+  <section id="showResult">
+      
+      
+  </section>
+  
+  
+  <!-- End showResult -->
+  <section class="info">
+      
+    <div class="dark-overlay">
+
+      <h1>Explore</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero reprehenderit et ullam facilis vero earum provident ab sapiente quam eos inventore, asperiores voluptatum voluptates? Dolore enim quae dolorem qui atque.</p>
+      <button class="cta-btn">More Info</button>
+    </div>
+  </section>
+  <!-- end info -->
+  <section class="boxes">
+    <div class="box">
+      <img src="https://source.unsplash.com/random/200x201" alt="">
+      <h3>lorem</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, minus!</p>
+    </div>
+    <div class="box">
+      <img src="https://source.unsplash.com/random/200x200" alt="">
+      <h3>lorem</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, minus!</p>
+    </div>
+    <div class="box">
+      <img src="https://source.unsplash.com/random/200x202" alt="">
+      <h3>lorem</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, minus!</p>
+    </div>
+    <div class="box">
+      <img src="https://source.unsplash.com/random/200x211" alt="">
+      <h3>lorem</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, minus!</p>
+    </div>
+  </section>
+    <!-- boxes end -->
+   
+    
+
+    <footer>
+      <p>Copyright &copy; 2020</p>
+    </footer>
+    <!-- end footer -->
+    <section class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h4>Your Trip.</h4>
+            </div>
+            <div class="modal-content">
+                
+                <form class="modal-form" id="form">
+                  <div class="form-control">
+                    <label for="from-city">From:</label>
+                    <input type="text" id="from-city" placeholder="From" class="form-input">
+                    <small>Error message</small>
+                  </div>
+                  <div class="form-control">
+                    <label for="to-city">To:</label>
+                    <input type="text" id="to-city" placeholder="To" class="form-input">
+                    <small>Error message</small>
+                  </div>
+                    <div class="form-control">
+                        <label for="departing">Departing:</label>
+                        <input type="text" id="departing" placeholder="yyyy-mm-dd" name="departing" class="form-input" /> 
+                        <small>Error message</small>
+                      </div>
+                    <div class="form-control">
+                        <label for="return">Return:</label>
+                        <input type="text" id="return" placeholder="yyyy-mm-dd" name="return" class="form-input"/>
+                        <small>Error message</small>
+                    </div>
+                    <input  type="submit" value="submit" class="submit-btn" id="submit-btn" >
+                </form>
+                <!-- modal-form ends -->
+            </div>
+        </div>
+    </section>
+    <!-- modal-container ends -->
+  </main>
+  <script>
+    // Check that service workers are supported
+    if ("serviceWorker" in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js");
+      });
+    }
+  </script>
+</body>
+
+</html>
