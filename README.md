@@ -62,4 +62,4 @@ $ npm run build-prod && npm start
 
 ![homePage](pic/homePage.png)
 ![homePage](pic/form.png)
-![homePage](pic/navbar.png)
+![homePage](pic/navBar.png)
